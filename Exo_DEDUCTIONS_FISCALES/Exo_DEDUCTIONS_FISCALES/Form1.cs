@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Exo_DEDUCTIONS_FISCALES
 {
-    public partial class Form1 : Form
+    public partial class Deduction : Form
     {
-        public Form1()
+        public Deduction()
         {
             InitializeComponent();
         }
@@ -23,6 +23,16 @@ namespace Exo_DEDUCTIONS_FISCALES
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Deduction_Load(object sender, EventArgs e)
         {
 
         }

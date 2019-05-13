@@ -1,6 +1,6 @@
 ﻿namespace Exo_DEDUCTIONS_FISCALES
 {
-    partial class Form1
+    partial class Deduction
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -32,9 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BoxRAB = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CocheJeune = new System.Windows.Forms.CheckBox();
+            this.CocheTransport = new System.Windows.Forms.CheckBox();
+            this.CocheRabais = new System.Windows.Forms.CheckBox();
+            this.TextBas = new System.Windows.Forms.Label();
+            this.BtnCalcul = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,15 +56,15 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 25);
+            this.label2.Size = new System.Drawing.Size(187, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Revenu annuel brut";
+            this.label2.Text = "Coefficient familial";
             // 
             // BoxRAB
             // 
-            this.BoxRAB.Location = new System.Drawing.Point(371, 109);
+            this.BoxRAB.Location = new System.Drawing.Point(267, 109);
             this.BoxRAB.Name = "BoxRAB";
-            this.BoxRAB.Size = new System.Drawing.Size(70, 20);
+            this.BoxRAB.Size = new System.Drawing.Size(174, 20);
             this.BoxRAB.TabIndex = 3;
             // 
             // textBox1
@@ -72,50 +74,73 @@
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // checkBox1
+            // CocheJeune
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(37, 186);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(107, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Déduction Jeune";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CocheJeune.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CocheJeune.Location = new System.Drawing.Point(31, 178);
+            this.CocheJeune.Name = "CocheJeune";
+            this.CocheJeune.Size = new System.Drawing.Size(201, 33);
+            this.CocheJeune.TabIndex = 5;
+            this.CocheJeune.Text = "Déduction Jeune";
+            this.CocheJeune.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // CocheTransport
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(37, 209);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "Dédution transport";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CocheTransport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CocheTransport.Location = new System.Drawing.Point(31, 209);
+            this.CocheTransport.Name = "CocheTransport";
+            this.CocheTransport.Size = new System.Drawing.Size(211, 32);
+            this.CocheTransport.TabIndex = 6;
+            this.CocheTransport.Text = "Dédution transport";
+            this.CocheTransport.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // CocheRabais
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(37, 232);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(109, 17);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "Rabais fidélité (%)";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CocheRabais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CocheRabais.Location = new System.Drawing.Point(31, 240);
+            this.CocheRabais.Name = "CocheRabais";
+            this.CocheRabais.Size = new System.Drawing.Size(113, 29);
+            this.CocheRabais.TabIndex = 7;
+            this.CocheRabais.Text = "Rabais fidélité (%)";
+            this.CocheRabais.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // TextBas
+            // 
+            this.TextBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBas.Location = new System.Drawing.Point(97, 395);
+            this.TextBas.Name = "TextBas";
+            this.TextBas.Size = new System.Drawing.Size(330, 43);
+            this.TextBas.TabIndex = 8;
+            this.TextBas.Text = "...";
+            this.TextBas.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // BtnCalcul
+            // 
+            this.BtnCalcul.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcul.Location = new System.Drawing.Point(135, 313);
+            this.BtnCalcul.Name = "BtnCalcul";
+            this.BtnCalcul.Size = new System.Drawing.Size(167, 53);
+            this.BtnCalcul.TabIndex = 9;
+            this.BtnCalcul.Text = "Calcul";
+            this.BtnCalcul.UseVisualStyleBackColor = true;
+            // 
+            // Deduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 450);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BtnCalcul);
+            this.Controls.Add(this.TextBas);
+            this.Controls.Add(this.CocheRabais);
+            this.Controls.Add(this.CocheTransport);
+            this.Controls.Add(this.CocheJeune);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BoxRAB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Deduction";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Deduction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,9 +152,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox BoxRAB;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox CocheJeune;
+        private System.Windows.Forms.CheckBox CocheTransport;
+        private System.Windows.Forms.CheckBox CocheRabais;
+        private System.Windows.Forms.Label TextBas;
+        private System.Windows.Forms.Button BtnCalcul;
     }
 }
 
