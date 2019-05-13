@@ -37,6 +37,9 @@
             this.CocheRabais = new System.Windows.Forms.CheckBox();
             this.TextBas = new System.Windows.Forms.Label();
             this.BtnCalcul = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,17 +65,19 @@
             // 
             // BoxRAB
             // 
-            this.BoxRAB.Location = new System.Drawing.Point(267, 109);
+            this.BoxRAB.Location = new System.Drawing.Point(392, 108);
             this.BoxRAB.Name = "BoxRAB";
-            this.BoxRAB.Size = new System.Drawing.Size(174, 20);
+            this.BoxRAB.Size = new System.Drawing.Size(63, 20);
             this.BoxRAB.TabIndex = 3;
+            this.BoxRAB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(267, 49);
+            this.textBox1.Location = new System.Drawing.Point(281, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CocheJeune
             // 
@@ -109,9 +114,9 @@
             this.TextBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBas.Location = new System.Drawing.Point(97, 395);
             this.TextBas.Name = "TextBas";
-            this.TextBas.Size = new System.Drawing.Size(330, 43);
+            this.TextBas.Size = new System.Drawing.Size(358, 43);
             this.TextBas.TabIndex = 8;
-            this.TextBas.Text = "...";
+            this.TextBas.Text = "Revenu imposable : fr.";
             this.TextBas.Click += new System.EventHandler(this.label3_Click);
             // 
             // BtnCalcul
@@ -123,12 +128,40 @@
             this.BtnCalcul.TabIndex = 9;
             this.BtnCalcul.Text = "Calcul";
             this.BtnCalcul.UseVisualStyleBackColor = true;
+            this.BtnCalcul.Click += new System.EventHandler(this.BtnCalcul_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(392, 180);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(63, 20);
+            this.textBox2.TabIndex = 10;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(392, 209);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(63, 20);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(392, 247);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(63, 20);
+            this.textBox4.TabIndex = 12;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Deduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 450);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.BtnCalcul);
             this.Controls.Add(this.TextBas);
             this.Controls.Add(this.CocheRabais);
@@ -157,6 +190,9 @@
         private System.Windows.Forms.CheckBox CocheRabais;
         private System.Windows.Forms.Label TextBas;
         private System.Windows.Forms.Button BtnCalcul;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
