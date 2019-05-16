@@ -42,16 +42,36 @@ namespace Exo_DEDUCTIONS_FISCALES
 
         private void BtnCalcul_Click(object sender, EventArgs e)
         {
-            if 
+            
             int Rannuel = int.Parse(textBox1.Text);
             float Coefficient = float.Parse(BoxRAB.Text);
-            int Jeune = int.Parse(textBox1.Text);
+            int Jeune = int.Parse(textBox2.Text);
             int transport = int.Parse(textBox3.Text);
             int Rabais = int.Parse(textBox4.Text);
             float Resultat;
             Resultat = Rannuel / Coefficient;
+               
+            if (CocheJeune.Checked == true);
+            {
+                Resultat = Resultat - (Jeune / 100 * Resultat); 
+            }
+            if (CocheTransport.Checked == true) ;
+            {
+                Resultat = Resultat - (transport / 100 * Resultat);
+            }
+            if (CocheRabais.Checked == true) ;
+            {
+                Resultat = Resultat - (Rabais / 100 * Resultat); 
+            }
+            TextBas.Visible = true;
+          
+            TextBas.Text = String.Format("Revenu imposable : {0:C2}", Resultat);
+        }
+        
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
-
     }
 }
