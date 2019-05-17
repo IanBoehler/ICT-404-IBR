@@ -88,15 +88,16 @@
             this.CocheJeune.TabIndex = 5;
             this.CocheJeune.Text = "Déduction Jeune";
             this.CocheJeune.UseVisualStyleBackColor = true;
+            this.CocheJeune.CheckedChanged += new System.EventHandler(this.CocheJeune_CheckedChanged);
             // 
             // CocheTransport
             // 
             this.CocheTransport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CocheTransport.Location = new System.Drawing.Point(31, 209);
             this.CocheTransport.Name = "CocheTransport";
-            this.CocheTransport.Size = new System.Drawing.Size(211, 32);
+            this.CocheTransport.Size = new System.Drawing.Size(219, 32);
             this.CocheTransport.TabIndex = 6;
-            this.CocheTransport.Text = "Dédution transport";
+            this.CocheTransport.Text = "Déduction transport";
             this.CocheTransport.UseVisualStyleBackColor = true;
             // 
             // CocheRabais
@@ -112,9 +113,9 @@
             // TextBas
             // 
             this.TextBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBas.Location = new System.Drawing.Point(97, 395);
+            this.TextBas.Location = new System.Drawing.Point(32, 398);
             this.TextBas.Name = "TextBas";
-            this.TextBas.Size = new System.Drawing.Size(358, 43);
+            this.TextBas.Size = new System.Drawing.Size(423, 43);
             this.TextBas.TabIndex = 8;
             this.TextBas.Text = "Revenu imposable : fr.";
             this.TextBas.Click += new System.EventHandler(this.label3_Click);
@@ -132,28 +133,37 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(392, 180);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(63, 20);
             this.textBox2.TabIndex = 10;
+            this.textBox2.Text = "900";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(392, 209);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(63, 20);
             this.textBox3.TabIndex = 11;
+            this.textBox3.Text = "650";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(392, 247);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(63, 20);
             this.textBox4.TabIndex = 12;
+            this.textBox4.Text = "2.2";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // Deduction
             // 

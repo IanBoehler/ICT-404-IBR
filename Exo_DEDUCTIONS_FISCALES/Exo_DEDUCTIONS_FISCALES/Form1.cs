@@ -27,7 +27,7 @@ namespace Exo_DEDUCTIONS_FISCALES
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox2.Enabled = false;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -47,24 +47,37 @@ namespace Exo_DEDUCTIONS_FISCALES
             float Coefficient = float.Parse(BoxRAB.Text);
             int Jeune = int.Parse(textBox2.Text);
             int transport = int.Parse(textBox3.Text);
-            int Rabais = int.Parse(textBox4.Text);
+            float Rabais = float.Parse(textBox4.Text);
             float Resultat;
             Resultat = Rannuel / Coefficient;
-               
-            if (CocheJeune.Checked == true);
+                    
+            if (CocheJeune.Checked == true)
             {
-                Resultat = Resultat - (Jeune / 100 * Resultat); 
+                textBox2.Enabled = true;
+                Resultat = Resultat - (Jeune - Resultat);
+                
             }
-            if (CocheTransport.Checked == true) ;
+            else
             {
-                Resultat = Resultat - (transport / 100 * Resultat);
+                textBox2.Enabled = false;
+            
+
+
+
+
+
             }
-            if (CocheRabais.Checked == true) ;
+            if (CocheRabais.Checked == true)
             {
-                Resultat = Resultat - (Rabais / 100 * Resultat); 
+                Resultat = Resultat - (Rabais / 100 * Resultat);
+                
+            }
+            else
+            {
+                CocheRabais.Enabled = true;
             }
             TextBas.Visible = true;
-          
+
             TextBas.Text = String.Format("Revenu imposable : {0:C2}", Resultat);
         }
         
@@ -72,6 +85,21 @@ namespace Exo_DEDUCTIONS_FISCALES
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CocheJeune_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
