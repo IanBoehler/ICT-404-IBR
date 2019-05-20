@@ -46,6 +46,7 @@
             this.BtnStats.TabIndex = 0;
             this.BtnStats.Text = "Stats";
             this.BtnStats.UseVisualStyleBackColor = true;
+            this.BtnStats.Click += new System.EventHandler(this.BtnStats_Click);
             // 
             // BtnQuitter
             // 
@@ -105,6 +106,7 @@
             this.BtnBGauche.TabIndex = 6;
             this.BtnBGauche.Text = "Bas/Gauche";
             this.BtnBGauche.UseVisualStyleBackColor = true;
+            this.BtnBGauche.Click += new System.EventHandler(this.BtnBGauche_Click);
             // 
             // BtnHGauche
             // 
@@ -114,6 +116,7 @@
             this.BtnHGauche.TabIndex = 7;
             this.BtnHGauche.Text = "Haut/Gauche";
             this.BtnHGauche.UseVisualStyleBackColor = true;
+            this.BtnHGauche.Click += new System.EventHandler(this.BtnHGauche_Click);
             // 
             // FenêtreBleuRouge
             // 
