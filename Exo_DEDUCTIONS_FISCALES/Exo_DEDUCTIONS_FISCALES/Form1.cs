@@ -60,12 +60,6 @@ namespace Exo_DEDUCTIONS_FISCALES
             else
             {
                 textBox2.Enabled = false;
-            
-
-
-
-
-
             }
             if (CocheRabais.Checked == true)
             {
@@ -74,7 +68,15 @@ namespace Exo_DEDUCTIONS_FISCALES
             }
             else
             {
-                CocheRabais.Enabled = true;
+                CocheRabais.Enabled = false;
+            }
+            if (CocheTransport.Checked == true)
+            {
+                Resultat = Rannuel - transport;
+            }
+            else
+            {
+                textBox3.Enabled = false;
             }
             TextBas.Visible = true;
 
