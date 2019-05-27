@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LbTable = new System.Windows.Forms.TextBox();
             this.grpPâtes = new System.Windows.Forms.GroupBox();
-            this.RcmdExtra = new System.Windows.Forms.RadioButton();
-            this.RcmdFine = new System.Windows.Forms.RadioButton();
-            this.RcmdNormal = new System.Windows.Forms.RadioButton();
             this.RcmdEpaisse = new System.Windows.Forms.RadioButton();
+            this.RcmdNormal = new System.Windows.Forms.RadioButton();
+            this.RcmdFine = new System.Windows.Forms.RadioButton();
+            this.RcmdExtra = new System.Windows.Forms.RadioButton();
             this.chkAnchois = new System.Windows.Forms.CheckBox();
             this.chkCâpres = new System.Windows.Forms.CheckBox();
             this.chkJambon = new System.Windows.Forms.CheckBox();
@@ -61,6 +61,7 @@
             this.LbTable.Name = "LbTable";
             this.LbTable.Size = new System.Drawing.Size(38, 20);
             this.LbTable.TabIndex = 1;
+            this.LbTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // grpPâtes
             // 
@@ -76,27 +77,16 @@
             this.grpPâtes.Text = "Pâte";
             this.grpPâtes.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // RcmdExtra
+            // RcmdEpaisse
             // 
-            this.RcmdExtra.AutoSize = true;
-            this.RcmdExtra.Location = new System.Drawing.Point(18, 21);
-            this.RcmdExtra.Name = "RcmdExtra";
-            this.RcmdExtra.Size = new System.Drawing.Size(69, 17);
-            this.RcmdExtra.TabIndex = 0;
-            this.RcmdExtra.TabStop = true;
-            this.RcmdExtra.Text = "Extra-fine";
-            this.RcmdExtra.UseVisualStyleBackColor = true;
-            // 
-            // RcmdFine
-            // 
-            this.RcmdFine.AutoSize = true;
-            this.RcmdFine.Location = new System.Drawing.Point(19, 62);
-            this.RcmdFine.Name = "RcmdFine";
-            this.RcmdFine.Size = new System.Drawing.Size(45, 17);
-            this.RcmdFine.TabIndex = 1;
-            this.RcmdFine.TabStop = true;
-            this.RcmdFine.Text = "Fine";
-            this.RcmdFine.UseVisualStyleBackColor = true;
+            this.RcmdEpaisse.AutoSize = true;
+            this.RcmdEpaisse.Location = new System.Drawing.Point(19, 144);
+            this.RcmdEpaisse.Name = "RcmdEpaisse";
+            this.RcmdEpaisse.Size = new System.Drawing.Size(62, 17);
+            this.RcmdEpaisse.TabIndex = 3;
+            this.RcmdEpaisse.TabStop = true;
+            this.RcmdEpaisse.Text = "Epaisse";
+            this.RcmdEpaisse.UseVisualStyleBackColor = true;
             // 
             // RcmdNormal
             // 
@@ -109,16 +99,29 @@
             this.RcmdNormal.Text = "Normal";
             this.RcmdNormal.UseVisualStyleBackColor = true;
             // 
-            // RcmdEpaisse
+            // RcmdFine
             // 
-            this.RcmdEpaisse.AutoSize = true;
-            this.RcmdEpaisse.Location = new System.Drawing.Point(19, 144);
-            this.RcmdEpaisse.Name = "RcmdEpaisse";
-            this.RcmdEpaisse.Size = new System.Drawing.Size(62, 17);
-            this.RcmdEpaisse.TabIndex = 3;
-            this.RcmdEpaisse.TabStop = true;
-            this.RcmdEpaisse.Text = "Epaisse";
-            this.RcmdEpaisse.UseVisualStyleBackColor = true;
+            this.RcmdFine.AutoSize = true;
+            this.RcmdFine.Location = new System.Drawing.Point(19, 62);
+            this.RcmdFine.Name = "RcmdFine";
+            this.RcmdFine.Size = new System.Drawing.Size(45, 17);
+            this.RcmdFine.TabIndex = 1;
+            this.RcmdFine.TabStop = true;
+            this.RcmdFine.Text = "Fine";
+            this.RcmdFine.UseVisualStyleBackColor = true;
+            this.RcmdFine.CheckedChanged += new System.EventHandler(this.RcmdFine_CheckedChanged);
+            // 
+            // RcmdExtra
+            // 
+            this.RcmdExtra.AutoSize = true;
+            this.RcmdExtra.Location = new System.Drawing.Point(18, 21);
+            this.RcmdExtra.Name = "RcmdExtra";
+            this.RcmdExtra.Size = new System.Drawing.Size(69, 17);
+            this.RcmdExtra.TabIndex = 0;
+            this.RcmdExtra.TabStop = true;
+            this.RcmdExtra.Text = "Extra-fine";
+            this.RcmdExtra.UseVisualStyleBackColor = true;
+            this.RcmdExtra.CheckedChanged += new System.EventHandler(this.RcmdExtra_CheckedChanged);
             // 
             // chkAnchois
             // 
@@ -129,6 +132,7 @@
             this.chkAnchois.TabIndex = 4;
             this.chkAnchois.Text = "Anchois";
             this.chkAnchois.UseVisualStyleBackColor = true;
+            this.chkAnchois.CheckedChanged += new System.EventHandler(this.chkAnchois_CheckedChanged);
             // 
             // chkCâpres
             // 
@@ -139,6 +143,7 @@
             this.chkCâpres.TabIndex = 5;
             this.chkCâpres.Text = "Câpres";
             this.chkCâpres.UseVisualStyleBackColor = true;
+            this.chkCâpres.CheckedChanged += new System.EventHandler(this.chkCâpres_CheckedChanged);
             // 
             // chkJambon
             // 
@@ -177,15 +182,19 @@
             this.cmdCommander.TabIndex = 9;
             this.cmdCommander.Text = "Commander";
             this.cmdCommander.UseVisualStyleBackColor = true;
+            this.cmdCommander.Click += new System.EventHandler(this.cmdCommander_Click);
             // 
             // txtCommande
             // 
             this.txtCommande.BackColor = System.Drawing.Color.Yellow;
+            this.txtCommande.Enabled = false;
+            this.txtCommande.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommande.Location = new System.Drawing.Point(36, 348);
             this.txtCommande.Multiline = true;
             this.txtCommande.Name = "txtCommande";
             this.txtCommande.Size = new System.Drawing.Size(341, 88);
             this.txtCommande.TabIndex = 10;
+            this.txtCommande.TextChanged += new System.EventHandler(this.txtCommande_TextChanged);
             // 
             // Form1
             // 
