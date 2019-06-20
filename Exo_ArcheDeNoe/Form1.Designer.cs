@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtTerre = new System.Windows.Forms.TextBox();
-            this.TxtBord = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.listboxTerre = new System.Windows.Forms.ListBox();
+            this.listboxBord = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -45,25 +45,6 @@
             this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Encore à terre";
-            // 
-            // TxtTerre
-            // 
-            this.TxtTerre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTerre.Location = new System.Drawing.Point(35, 50);
-            this.TxtTerre.Multiline = true;
-            this.TxtTerre.Name = "TxtTerre";
-            this.TxtTerre.Size = new System.Drawing.Size(191, 372);
-            this.TxtTerre.TabIndex = 1;
-            this.TxtTerre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // TxtBord
-            // 
-            this.TxtBord.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBord.Location = new System.Drawing.Point(496, 48);
-            this.TxtBord.Multiline = true;
-            this.TxtBord.Name = "TxtBord";
-            this.TxtBord.Size = new System.Drawing.Size(191, 372);
-            this.TxtBord.TabIndex = 2;
             // 
             // button1
             // 
@@ -85,6 +66,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "<===";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -96,16 +78,43 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "A Bord";
             // 
+            // listboxTerre
+            // 
+            this.listboxTerre.FormattingEnabled = true;
+            this.listboxTerre.Items.AddRange(new object[] {
+            "Araignée",
+            "Chat",
+            "Cheval",
+            "Chien",
+            "Cobra",
+            "Coccinelle",
+            "Kangourou",
+            "Perroquet",
+            "Rat",
+            "Ver de terre"});
+            this.listboxTerre.Location = new System.Drawing.Point(39, 57);
+            this.listboxTerre.Name = "listboxTerre";
+            this.listboxTerre.Size = new System.Drawing.Size(157, 329);
+            this.listboxTerre.TabIndex = 6;
+            // 
+            // listboxBord
+            // 
+            this.listboxBord.FormattingEnabled = true;
+            this.listboxBord.Location = new System.Drawing.Point(501, 57);
+            this.listboxBord.Name = "listboxBord";
+            this.listboxBord.Size = new System.Drawing.Size(157, 329);
+            this.listboxBord.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listboxBord);
+            this.Controls.Add(this.listboxTerre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.TxtBord);
-            this.Controls.Add(this.TxtTerre);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Arche de Noé";
@@ -117,11 +126,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtTerre;
-        private System.Windows.Forms.TextBox TxtBord;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listboxTerre;
+        private System.Windows.Forms.ListBox listboxBord;
     }
 }
 

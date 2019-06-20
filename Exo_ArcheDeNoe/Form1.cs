@@ -24,9 +24,13 @@ namespace Exo_ArcheDeNoe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TxtBord.Text = TxtTerre.Text;
+          
 
-            TxtTerre.Text = " ";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
